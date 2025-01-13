@@ -1,0 +1,10 @@
+= README
+Bastian Basler <>
+:description: Anforderungen an das Projekt
+:url-repo: https://github.com/babasler/training-recording-devic
+
+== Vision
+
+== Visualisierung
+
+== Etc
