@@ -6,19 +6,17 @@ Bastian Basler <>
 == Anforderungen
 [cols="1,1"]
 |===
-|Anforderung |Beschreibung
+|Nummer (REQ_X.X) |Anforderung
 
-|Cell in column 1, row 2
-|Cell in column 2, row 2
+|REQ_1.0 
+|Das System soll den Trainingsfortschritt des Benutzers aufzeichnen und visualisieren.
 
-|Cell in column 1, row 3
-|Cell in column 2, row 3
+|REQ_2.0
+|Das System soll 
 
 |Cell in column 1, row 4
 |Cell in column 2, row 4
 |===
 
-== Links
-Waage mit Aruino: https://www.youtube.com/watch?v=LIuf2egMioA' +
-Teile davon https://www.amazon.de/dp/B08DV1YW43/ref=sspa_dk_detail_5?psc=1&pf_rd_p=8e111585-a10f-40a4-b92c-c1e3c49654ce&pf_rd_r=YJ8YCDHTGYHW13F98MX6&pd_rd_wg=tZjlz&pd_rd_w=rKWMD&content-id=amzn1.sym.8e111585-a10f-40a4-b92c-c1e3c49654ce&pd_rd_r=5a3689d1-3ab1-4de1-a76f-374d2e611605&s=industrial&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWwy +
+
 

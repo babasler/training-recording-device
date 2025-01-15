@@ -1,0 +1,20 @@
+ifndef::imagesdir[:imagesdir: ../images]
+
+[[section-glossary]]
+== Glossar
+
+ifdef::arc42help[]
+
+endif::arc42help[]
+
+[cols="e,2e" options="header"]
+|===
+|Begriff |Definition
+
+|Split
+|Ein Trainingsplan, der die Muskelgruppen in verschiedene Tage aufteilt, um eine Überlastung zu vermeiden.
+
+|<Begriff-2
+|<Definition-2>
+|===
+‚
