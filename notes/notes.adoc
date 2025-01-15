@@ -4,7 +4,7 @@ Bastian Basler <>
 :url-repo: https://github.com/babasler/training-recording-devic
 
 == Notes
-
+- Ideen für Devices: Smartwatch, Smarte Waage, Smarter Spiegel und Apple App
 
 == Links
 Waage mit Aruino: https://www.youtube.com/watch?v=LIuf2egMioA' +

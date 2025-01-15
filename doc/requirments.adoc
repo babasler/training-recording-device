@@ -1,22 +1,39 @@
 = Requirements
 Bastian Basler <>
 :description: Anforderungen an das Projekt
-:url-repo: https://github.com/babasler/training-recording-devic
+:url-repo: https://github.com/babasler/training-recording-device
 
 == Anforderungen
-[cols="1,1"]
 |===
-|Nummer (REQ_X.X) |Anforderung
-
-|REQ_1.0 
-|Das System soll den Trainingsfortschritt des Benutzers aufzeichnen und visualisieren.
-
-|REQ_2.0
-|Das System soll 
-
-|Cell in column 1, row 4
-|Cell in column 2, row 4
+| Nr. | Funktionale Anforderung | Beschreibung
+| 1   | Datenaufzeichnung und -speicherung | Aufzeichnung von Sätzen, Wiederholungen, Volumen, Puls, Sauerstoffgehalt, Schritten und Körpergewicht.
+| 2   | Datenverarbeitung und -visualisierung | Die Aufgezeichneten Daten sollen dem Benutzer dargestellt werden.
+| 3   | Datenverarbeitung | Berechnung von Gesundheits- und Fitnesswerten aus den aufgezeichneten Daten.
+| 3.1 | Datenverarbeitung | Gesundheits- und Fitnesswerte: BMI, ...
+| 4   | Übungskatalog | Bereitstellung von Trainingsplänen mit vordefinierten Übungen
+| 5   | Übungsverwaltung | Möglichkeit für Benutzer, eigene Übungen zu erstellen und zu speichern.
+|5.1  | Übungsverwaltung | Hinzufügen von Name, Primär- und Sekundärmuskelgruppen, die Unterscheidung, ob es eine Übung mit Zusatzgewicht oder nur mit dem Körpergewicht ist und einer Beschreibung.
+| 6   | Trainingsplan-Verwaltung | Nutzung vorgegebener oder selbst erstellter Trainingspläne mit Berücksichtigung von Splits und Frequenzen.
+|6.1  | Trainingsplan-Verwaltung | Ein Trainingsplan besteht aus einem Aufwärmen gefolgt von einer oder mehreren unterstützen Sportarten, die in einem Training kombiniert werden können.
+|6.2  | Trainingsplan-Verwaltung | Ein Training besteht aus einer bis n Übungen
+| 7   | Einstellungsmöglichkeiten des Trainings | Anpassung von Pausenzeiten sowie Belastungs- und Pausenzeiten für Zirkeltraining.
+| 8   | Trainingsverlauf | Detaillierte Ansicht vergangener Trainingseinheiten nach Datum oder Trainingsplan.
+|8.1  | Trainingsverlauf | Anzeige im Aktuellem Training, wie viele Sätze und Wiederholungen noch zu absolvieren sind.
+|8.2  | Trainingsverlauf | Anzeige im Aktuellem Training, wie viele Sätze und Wiederholungen bereits absolviert wurden.
+|8.3  | Trainingsverlauf | Anzeige im Aktuellem Training, wie die Steigerung des Volumens in jedem Satz im Vergleich zum letzten Training war.
+|8.4  | Trainingsverlauf | Anzeige im Aktuellem Training, wie lange der Aktuelle Satz bzw die akutelle Pause dauert und wie lang das Training insgesamt dauert.
+| 8.5 | Trainingsverlauf| Anzeige, des Berechneten Pulses und Sauerstoffgehalts im Blut.
+| 9   | Kombination von Sportarten | Möglichkeit, verschiedene Sportarten in einem Training zu kombinieren.
+| 10  | Leistungsstatistiken | Darstellung von Fortschrittsdiagrammen für Volumen, Gewicht und Wiederholungen über Zeiträume.
+| 11  | Integration von Wearables | Kompatibilität mit Fitness-Trackern und Smartwatches zur direkten Datenerfassung.
+| 12  | Wöchentliche Trainingsübersicht | Automatische Übersicht über den Fortschritt und Erinnerung bei versäumten Trainings.
+| 13  | Erinnerungsfunktionen | Benachrichtigungen für anstehende Trainings
+| 14  | Multi-Trainingsplan-Management | Verwaltung mehrerer Trainingspläne und einfacher Wechsel zwischen ihnen.
+| 15  | Authentifizierung | Möglichkeit, sich zu authentifizieren, um die Daten einem Benutzer zuzuordnen.
+| 16  | Authentifizierung | Möglichkeit, mehrere Benutzer zu erstellen und zu verwalten.
+| 17  | Visualisierung | Möglichkeiten in einem Kalender vergangene Trainingseinheiten zu sehen.
 |===
+
 
 
 
