@@ -2,6 +2,7 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-introduction-and-goals]]
 ==	Einführung und Ziele
+Das Ziel dieses Projektest ist die Entwicklung eines Systems zum Aufzeichen des Trainingsfortschritts der Nutzer. Die wichtigsten Parameter, die den Fortschritt im Training anzeigen sind: Summe des bewegten Gewichts, Anzahl gemachte Wiederholungen und das Körpergewicht. Das System soll die Parameter aufzeichenen und dem Nutzer den gemachten Fortschritt anzeigen. Damit der Nutzer sehen kann, wie er sich im Training verbessert hat und ob er Gewicht verloren oder zugenommen hat. Dabei soll der Fokus auf Krafttraining und Zirkel Training liegen. Der Nutzer soll die Möglichkeit haben, die Trainingspläne zu erstellen oder vorgegebene Trainingspläne zu nutzen. Des Weiteren soll der Nutzer eigene Übungen hinzufügen können.
 
 ifdef::arc42help[]
 

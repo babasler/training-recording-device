@@ -2,6 +2,9 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-architecture-constraints]]
 == Randbedingungen
+* Die Darstellung soll als IOS App umgesetzt werden.
+* Es wird Apples Programmiersprache Swift für die Darstellung verwendet.
+* Das System beinhaltet Wearables bzw. smarte Devices. 
 
 ifdef::arc42help[]
 
