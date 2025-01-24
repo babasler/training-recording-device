@@ -2,6 +2,8 @@ ifndef::imagesdir[:imagesdir: ../images]
 
 [[section-context-and-scope]]
 == Kontextabgrenzung
+.Systemkontext
+image::Systemkontext.drawio.png[500,500]
 
 ifdef::arc42help[]
 

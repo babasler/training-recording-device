@@ -1,0 +1,74 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.0.7 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="26.0.7">
+  <diagram name="Page-1" id="6ju0B2Q9NQIPtbjr63Oo">
+    <mxGraphModel dx="1481" dy="1975" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EgqKoH650ESNxZTyxygC-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="EgqKoH650ESNxZTyxygC-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1295" y="140" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-2" value="Nutzer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="60" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-3" value="" style="whiteSpace=wrap;html=1;verticalAlign=top;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="250" width="530" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EgqKoH650ESNxZTyxygC-5" target="EgqKoH650ESNxZTyxygC-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-5" value="Konfigurator" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="365" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-6" value="Verfolgt einen Trainingsplan&lt;div&gt;Überwacht die&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;Trägt Daten ein&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="148" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-7" value="Erstellt Trainingspläne&lt;div&gt;Erstellt Übungen&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="890" y="350" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-8" value="&amp;lt;&amp;lt;Teilsystem&amp;gt;&amp;gt;&lt;div&gt;GUI&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-9" value="&amp;lt;&amp;lt;Teilsystem&amp;gt;&amp;gt;&lt;div&gt;Datenverarbeitung&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-10" value="&amp;lt;&amp;lt;Teilsystem&amp;gt;&amp;gt;&lt;div&gt;Datenaufnahme&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.167;exitY=1.031;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="EgqKoH650ESNxZTyxygC-8" target="EgqKoH650ESNxZTyxygC-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1190" y="290" as="sourcePoint" />
+            <mxPoint x="1240" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-12" value="Sendet Konfigurationsinformationen&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="780" y="138" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="EgqKoH650ESNxZTyxygC-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1260" y="-330" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-14" value="Nutzer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1245" y="-410" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-15" value="&amp;lt;&amp;lt;System&amp;gt;&amp;gt;&lt;div&gt;GUI&lt;/div&gt;&lt;div&gt;Datenverarbeitung&lt;/div&gt;&lt;div&gt;Datenaufnahme&lt;/div&gt;&lt;div&gt;Persistenz&lt;/div&gt;" style="whiteSpace=wrap;html=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1185" y="-250" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EgqKoH650ESNxZTyxygC-17" target="EgqKoH650ESNxZTyxygC-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-17" value="Konfigurator" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="1025" y="-240" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-18" value="Verfolgt einen Trainingsplan&lt;div&gt;Überwacht die&amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;Trägt Daten ein&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1265" y="-322" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EgqKoH650ESNxZTyxygC-19" value="Erstellt Trainingspläne&lt;div&gt;Erstellt Übungen&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1055" y="-253" width="140" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
