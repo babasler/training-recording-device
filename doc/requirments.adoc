@@ -12,7 +12,7 @@ Bastian Basler <>
 | 3.1 | Datenverarbeitung | Gesundheits- und Fitnesswerte: BMI, ...
 | 4   | Übungskatalog | Bereitstellung von Trainingsplänen mit vordefinierten Übungen
 | 5   | Übungsverwaltung | Möglichkeit für Benutzer, eigene Übungen zu erstellen und zu speichern.
-|5.1  | Übungsverwaltung | Hinzufügen von Name, Primär- und Sekundärmuskelgruppen, die Unterscheidung, ob es eine Übung mit Zusatzgewicht oder nur mit dem Körpergewicht ist und einer Beschreibung.
+|5.1  | Übungsverwaltung | Hinzufügen von Name, Primär- und Sekundärmuskelgruppen, die Unterscheidung, ob es eine Übung mit Zusatzgewicht oder nur mit dem Körpergewicht ist und einer Beschreibung. Und ob es ein Aufwärm oder Arbeitssatz ist.
 | 6   | Trainingsplan-Verwaltung | Nutzung vorgegebener oder selbst erstellter Trainingspläne mit Berücksichtigung von Splits und Frequenzen.
 |6.1  | Trainingsplan-Verwaltung | Ein Trainingsplan besteht aus einem Aufwärmen gefolgt von einer oder mehreren unterstützen Sportarten, die in einem Training kombiniert werden können.
 |6.2  | Trainingsplan-Verwaltung | Ein Training besteht aus einer bis n Übungen
@@ -30,7 +30,7 @@ Bastian Basler <>
 | 13  | Erinnerungsfunktionen | Benachrichtigungen für anstehende Trainings
 | 14  | Multi-Trainingsplan-Management | Verwaltung mehrerer Trainingspläne und einfacher Wechsel zwischen ihnen.
 | 15  | Authentifizierung | Möglichkeit, sich zu authentifizieren, um die Daten einem Benutzer zuzuordnen.
-| 16  | Authentifizierung | Möglichkeit, mehrere Benutzer zu erstellen und zu verwalten.
+| 16  | Authentifizierung | Möglichkeit, mehrere Benutzer zu erstellen und zu verwalten.‚
 | 17  | Visualisierung | Möglichkeiten in einem Kalender vergangene Trainingseinheiten zu sehen.
 |===
 
