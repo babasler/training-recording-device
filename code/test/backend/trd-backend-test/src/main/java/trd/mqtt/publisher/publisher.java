@@ -1,4 +1,4 @@
-package trd.mqtt;
+package trd.mqtt.publisher;
 
 import org.eclipse.paho.client.mqttv3.*;
 
@@ -25,7 +25,7 @@ public class publisher
 				Thread.sleep(1000);
 			}
 
-			client.disconnect();
+			//client.disconnect();
 		}
 		catch(Exception e)
 		{

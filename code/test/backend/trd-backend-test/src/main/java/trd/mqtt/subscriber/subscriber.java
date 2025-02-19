@@ -1,4 +1,4 @@
-package trd.mqtt;
+package trd.mqtt.subscriber;
 
 import org.eclipse.paho.client.mqttv3.*;
 
