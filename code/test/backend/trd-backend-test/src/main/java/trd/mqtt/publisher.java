@@ -4,7 +4,6 @@ import org.eclipse.paho.client.mqttv3.*;
 
 public class publisher
 {
-
 	private static final String BROKER_URL = "tcp://localhost:1883"; // Moquette läuft lokal
 	private static final String TOPIC = "sensor/temp";
 
@@ -18,12 +17,12 @@ public class publisher
 			System.out.println("✅ MQTT Publisher verbunden!");
 
 			// Nachricht senden
-			for(int i = 0; i < 10; i++)
+			while(true)
 			{
-				String message = Integer.toString(i); // Temperaturwert simulieren
+				String message = "Temperatur: " + (Math.random() * 100);
 				client.publish(TOPIC, new MqttMessage(message.getBytes()));
 				System.out.println("📤 Nachricht gesendet: " + message);
-				Thread.sleep(100);
+				Thread.sleep(1000);
 			}
 
 			client.disconnect();
