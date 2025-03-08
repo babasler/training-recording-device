@@ -15,5 +15,7 @@ jobs:
         run: |
           cd code/test/
           docker compose down
+          cd backend/
           mvn clean package
+          cd ..
           docker compose up --build -d
