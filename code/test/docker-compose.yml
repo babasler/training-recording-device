@@ -1,0 +1,14 @@
+services:
+  backend:
+    image: backend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile-backend
+    container_name: backend
+    networks:
+      - trd-net
+volumes:
+  logs:
+networks:
+  trd-net:
+    driver: bridge
