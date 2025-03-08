@@ -1,1 +1,19 @@
+name: Deploy on Raspberry Pi
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, ARM64, Linux]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Deploy on Raspberry Pi
+        run: |
+          cd code/test/
+          docker compose down
+          mvn clean package
+          docker compose up --build -d
