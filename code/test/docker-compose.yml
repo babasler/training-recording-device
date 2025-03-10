@@ -1,18 +1,15 @@
+version: "3.8"
 services:
   backend:
     build: ./backend
-    networks:
-      - app-network
-
+    container_name: backend
+    ports:
+      - "8080:8080"
+  
   frontend:
     build: ./frontend
+    container_name: frontend
     ports:
-      - "5050:5050"
+      - "3000:3000"
     depends_on:
       - backend
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
