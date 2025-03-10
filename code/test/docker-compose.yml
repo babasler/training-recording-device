@@ -4,7 +4,7 @@ services:
     build: ./backend
     container_name: backend
     ports:
-      - "8083:8083"
+      - "8084:8084"
   
   frontend:
     build: ./frontend
