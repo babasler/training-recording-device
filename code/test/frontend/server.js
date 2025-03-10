@@ -7,10 +7,10 @@ const PORT = 3000;
 // Statisches Frontend aus "public" servieren
 app.use(express.static(path.join(__dirname, "public")));
 
-// API-Route
-// app.get("/api/hello", (req, res) => {
-//     res.json({ message: "Hello from the backend!" });
-// });
+//API-Route
+app.get("/api/hello", (req, res) => {
+    res.json({ message: "Hello from the backend!" });
+});
 
 // Server starten
 app.listen(PORT, () => {
