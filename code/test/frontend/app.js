@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("http://localhost:8084/api/hello")  // Ruft die Spring Boot API ab
-      .then((response) => response.text())  // Backend gibt reinen Text zurück
+  fetch("/api/hello")
+      .then((response) => response.json())
       .then((data) => {
-        document.getElementById("message").innerText = data;
+        document.getElementById("message").innerText = data.message;
       })
       .catch((err) => console.error("Fehler:", err));
 });
-
 
