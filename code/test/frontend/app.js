@@ -1,6 +1,6 @@
 // app.js
 document.getElementById('getButton').addEventListener('click', () => {
-  fetch('http://neptune4:8084/api/hello')
+  fetch('http://backend:8084/api/hello')
       .then(response => response.text())  // Wir erwarten eine Textantwort
       .then(data => {
         document.getElementById('response').innerText = data;
