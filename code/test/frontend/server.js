@@ -13,6 +13,6 @@ app.use(express.static(path.join(__dirname, "public")));
 // });
 
 // Server starten
-// app.listen(PORT, () => {
-//     console.log(`✅ Server läuft auf http://localhost:${PORT}`);
-// });
+app.listen(PORT, () => {
+    console.log(`✅ Server läuft auf http://localhost:${PORT}`);
+});
