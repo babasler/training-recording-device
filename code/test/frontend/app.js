@@ -1,9 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("/api/hello")
-      .then((response) => response.json())
-      .then((data) => {
-        document.getElementById("message").innerText = data.message;
+// app.js
+document.getElementById('getButton').addEventListener('click', () => {
+  fetch('http://neptune4:8084/api/hello')
+      .then(response => response.text())  // Wir erwarten eine Textantwort
+      .then(data => {
+        document.getElementById('response').innerText = data;
       })
-      .catch((err) => console.error("Fehler:", err));
+      .catch(error => {
+        console.error('Fehler bei GET-Anfrage:', error);
+      });
 });
-
