@@ -1,14 +1,10 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-
-// Statische Dateien (CSS, JS, etc.)
-app.use(express.static('public'));
-
-// Route für die Startseite
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("http://localhost:8080/api/hello")  // Ruft die Spring Boot API ab
+      .then((response) => response.text())  // Backend gibt reinen Text zurück
+      .then((data) => {
+        document.getElementById("message").innerText = data;
+      })
+      .catch((err) => console.error("Fehler:", err));
 });
 
-module.exports = app;
 
