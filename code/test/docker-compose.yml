@@ -5,9 +5,10 @@ services:
     container_name: backend
     ports:
       - "8084:8084"
-  angular-app:
-    build: .
+  frontend:
+    build: ./frontend
     platform: linux/arm/v7
+    container_name: frontend
     ports:
       - "5000:80"
     restart: unless-stopped
