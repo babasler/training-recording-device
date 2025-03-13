@@ -1,5 +1,5 @@
 # Schritt 1: Angular App bauen
-FROM node:18-alpine AS build
+FROM node:18 AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm install
