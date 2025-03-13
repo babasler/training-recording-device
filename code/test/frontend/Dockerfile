@@ -4,6 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
+RUN npm install --save-dev esbuild-linux-arm64
 RUN npm run build --prod
 
 # Stage 2: Production mit NGINX (ARM-kompatibel)
