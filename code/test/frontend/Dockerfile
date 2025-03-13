@@ -1,16 +1,14 @@
-# Schritt 1: Angular App bauen
-FROM node:18 AS build
+# Stage 1: Build mit Node.js (ARM-kompatibel)
+FROM arm32v7/node:16-alpine AS builder
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm install
+COPY package*.json ./
+RUN npm ci
 COPY . .
 RUN npm run build --prod
 
-# Schritt 2: Nginx als Webserver für Angular
-FROM nginx:alpine
-COPY --from=build /app/dist/frontend /usr/share/nginx/html
+# Stage 2: Production mit NGINX (ARM-kompatibel)
+FROM arm32v7/nginx:alpine
+COPY --from=builder /app/dist/frontend /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
-
 
