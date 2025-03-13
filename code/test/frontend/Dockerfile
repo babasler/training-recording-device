@@ -1,19 +1,16 @@
-# Basis-Image mit Node.js
-FROM node:18-alpine
-
-# Arbeitsverzeichnis im Container
+# Schritt 1: Angular App bauen
+FROM node:18-alpine AS build
 WORKDIR /app
-
-# Abhängigkeiten installieren
 COPY package.json package-lock.json ./
 RUN npm install
-
-# Kopiere den Rest der App
 COPY . .
+RUN npm run build --prod
 
-# Port freigeben
-EXPOSE 4200
+# Schritt 2: Nginx als Webserver für Angular
+FROM nginx:alpine
+COPY --from=build /app/dist/my-angular-app /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
 
-# Startbefehl für Angular-Entwicklung (Hot-Reload)
-CMD ["npm", "start"]
 
