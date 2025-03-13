@@ -1,7 +1,19 @@
+# Basis-Image mit Node.js
 FROM node:18-alpine
+
+# Arbeitsverzeichnis im Container
 WORKDIR /app
-COPY package.json ./
+
+# Abhängigkeiten installieren
+COPY package.json package-lock.json ./
 RUN npm install
+
+# Kopiere den Rest der App
 COPY . .
-EXPOSE 3000
-CMD ["node", "server.js"]
+
+# Port freigeben
+EXPOSE 4200
+
+# Startbefehl für Angular-Entwicklung (Hot-Reload)
+CMD ["npm", "start"]
+
