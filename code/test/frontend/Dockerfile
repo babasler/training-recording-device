@@ -1,19 +1,19 @@
-# Basis-Image mit Apache
-FROM httpd:latest
+FROM node:14-alpine
 
+# Apache installieren
+RUN apk add --no-cache apache2
+
+# Arbeitsverzeichnis setzen
+WORKDIR /usr/src/app
+
+# package.json und package-lock.json kopieren
+COPY package*.json ./
+
+# npm Pakete installieren
 RUN npm install
-RUN ng build --configuration production
 
-# Kopiere das Angular-Build in den Apache-Ordner
-COPY /dist/frontend /usr/local/apache2/htdocs/
+# Restliche Anwendungsdateien kopieren
+COPY . .
 
-# Konfiguration für Angular Routing (optional)
-COPY apache.conf /usr/local/apache2/conf/httpd.conf
-
-
-# Exponiere den Port
-EXPOSE 80
-
-# Starte den Apache-Server
-CMD ["httpd", "-D", "FOREGROUND"]
-
+# Apache konfigurieren und starten
+CMD httpd -D FOREGROUND
