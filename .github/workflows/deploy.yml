@@ -19,5 +19,6 @@ jobs:
           mvn clean package
           cd ..
           cd frontend/
+          npm install
           ng build --configuration=production
           docker compose up --build -d
