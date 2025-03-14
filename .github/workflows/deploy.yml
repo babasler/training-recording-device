@@ -11,11 +11,13 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Deploy on Raspberry Pi
+      - name: Stop Docker Container
         run: |
           cd code/test/
           docker compose down
           cd backend/
           mvn clean package
           cd ..
+          cd frontend/
+          ng build --configuration=production
           docker compose up --build -d
