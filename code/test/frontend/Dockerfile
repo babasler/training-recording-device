@@ -10,7 +10,7 @@ COPY apache.conf /usr/local/apache2/conf/httpd.conf
 RUN npm install
 
 
-RUN ng build --configuration=production
+RUN ng build --configuration production
 
 # Exponiere den Port
 EXPOSE 80
