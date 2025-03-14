@@ -15,5 +15,7 @@ RUN npm install
 # Restliche Anwendungsdateien kopieren
 COPY . .
 
+EXPOSE 80
+
 # Apache konfigurieren und starten
 CMD httpd -D FOREGROUND
