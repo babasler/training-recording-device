@@ -7,6 +7,11 @@ COPY dist/my-angular-app/ /usr/local/apache2/htdocs/
 # Konfiguration für Angular Routing (optional)
 COPY apache.conf /usr/local/apache2/conf/httpd.conf
 
+RUN npm install
+
+
+RUN ng build --configuration=production
+
 # Exponiere den Port
 EXPOSE 80
 
