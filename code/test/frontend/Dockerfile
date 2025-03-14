@@ -6,6 +6,10 @@ RUN apk add --no-cache apache2
 # Arbeitsverzeichnis setzen
 WORKDIR /usr/src/app
 
+COPY ./dist/frontend /usr/local/apache2/htdocs/
+COPY apache.conf /usr/local/apache2/conf/httpd.conf
+
+
 # package.json und package-lock.json kopieren
 COPY package*.json ./
 
