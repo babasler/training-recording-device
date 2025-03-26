@@ -10,16 +10,11 @@ jobs:
   deploy:
     runs-on: [self-hosted, ARM64, Linux]
     steps:
-  
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Check Node and Angular CLI
-        run: |
-          node -v
-          npm -v
-          npx ng version
-      - name: Install Angular CLI (falls nötig)
-        run: npm install -g @angular/cli
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Deploy on Rasberry Pi
         run: |
           cd code/test/
