@@ -5,11 +5,17 @@ services:
     container_name: backend
     ports:
       - "8084:8084"
-  
   frontend:
     build: ./frontend
     container_name: frontend
+    image: 'frontend:latest'
     ports:
-      - "3000:3000"
+      - "4200:80"
+    restart: always
+    networks:
+      - trd-net
     depends_on:
       - backend
+  networks:
+    trd-net:
+        driver: bridge
