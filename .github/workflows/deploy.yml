@@ -30,6 +30,7 @@ jobs:
           mvn clean package
           cd ..
       - name: Start Docker Container
+        run: |
           docker compose build
           docker compose up -d 
           
