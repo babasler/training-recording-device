@@ -4,6 +4,7 @@ FROM node:20 AS build
 
 WORKDIR /app
 COPY package.json package-lock.json ./
+RUN npm install -g @angular/cli  # Installiere die Angular CLI global
 RUN npm run build --prod
 
 
