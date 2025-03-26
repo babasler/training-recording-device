@@ -5,9 +5,11 @@ FROM node:20 AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 
-#RUN npm install -g @angular/cli  
+RUN npm install -g @angular/cli  
 RUN npm install
 RUN npm run build --prod
+
+COPY . .
 
 
 # Stufe 2: Nginx als Webserver
