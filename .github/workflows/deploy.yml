@@ -28,8 +28,8 @@ jobs:
         run: |
           cd backend/
           mvn clean package
-      - name: Start Docker Container
           cd ..
+      - name: Start Docker Container
           docker compose build
           docker compose up -d 
           
