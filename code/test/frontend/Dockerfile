@@ -9,7 +9,7 @@ RUN npm install -g @angular/cli
 RUN npm install
 RUN npm run build --prod
 
-COPY . .
+COPY ./frontend /app
 
 
 # Stufe 2: Nginx als Webserver
