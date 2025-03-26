@@ -10,11 +10,12 @@ jobs:
   deploy:
     runs-on: [self-hosted, ARM64, Linux]
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - name: Deploy on Rasberry Pi
         run: |
           cd code/test/
