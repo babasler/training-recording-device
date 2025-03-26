@@ -24,14 +24,13 @@ jobs:
           cd code/test/frontend
           npm install
           npm run build --prod
-          cd ..
       - name: Build Backend
         run: |
-          cd backend/
+          cd code/test/backend
           mvn clean package
-          cd ..
       - name: Start Docker Container
         run: |
+          cd code/test
           docker compose build
           docker compose up -d 
           
