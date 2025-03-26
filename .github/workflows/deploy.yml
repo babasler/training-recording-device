@@ -20,7 +20,8 @@ jobs:
           docker compose down
       - name: Install Dependencies and build Frontend
         run: |
-          cd frontend
+          pwd
+          cd code/test/frontend
           npm install
           npm run build --prod
           cd ..
