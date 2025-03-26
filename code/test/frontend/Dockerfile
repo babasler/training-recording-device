@@ -1,15 +1,15 @@
 
 # Stufe 1: Angular Build
-FROM node:20 AS build
+#FROM node:20 AS build
 
-WORKDIR /app
-COPY package.json package-lock.json ./
+#WORKDIR /app
+#COPY package.json package-lock.json ./
 
-RUN npm install -g @angular/cli  
-RUN npm install
-RUN npm run build --prod
+#RUN npm install -g @angular/cli  
+#RUN npm install
+#RUN npm run build --prod
 
-COPY . .
+#COPY . .
 
 
 # Stufe 2: Nginx als Webserver
