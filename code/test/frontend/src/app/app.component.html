@@ -1,3 +1,8 @@
-<title>WELCOME TO MY OWN HOSTET WEBSITE</title>
-<h1>WELCOME TO MY OWN HOSTET WEBSITE</h1>
-<button>Click me!</button>
+<div>
+    <button (click)="onGetData()">Daten laden</button>
+  </div>
+  
+  <div *ngIf="content">
+    <p>{{ content }}</p>
+  </div>
+  
