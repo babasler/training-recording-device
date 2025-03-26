@@ -1,31 +1,19 @@
-# Node.js-Image als Basis verwenden
-FROM node:14-alpine
 
-# Apache und notwendige Build-Tools installieren
-RUN apk add --no-cache apache2 build-base
+# Stufe 1: Angular Build
+FROM node:20 AS build
 
-# Arbeitsverzeichnis setzen
-WORKDIR /usr/src/app
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm run build --prod
 
-# package.json und package-lock.json kopieren
-COPY package*.json ./
 
-# npm Pakete installieren
-RUN npm install
+# Stufe 2: Nginx als Webserver
+FROM nginx:alpine
 
-# Restliche Anwendungsdateien kopieren
-COPY . .
+COPY --from=build app/dist/frontend/browser/. /usr/share/nginx/html/
+#COPY --from=build app/dist/frontend/browser/index.html /usr/share/nginx/html/index.html
 
-# Angular-App bauen
-RUN npm run build
-
-# Apache konfigurieren
-COPY apache.conf /etc/apache2/httpd.conf
-
-# Angular-App in Apache-Verzeichnis kopieren
-RUN cp -r dist/frontend/* /var/www/localhost/htdocs/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
-
-# Apache starten
-CMD ["httpd", "-D", "FOREGROUND"]
+CMD ["nginx", "-g", "daemon off;"]
