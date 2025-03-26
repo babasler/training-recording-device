@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-
-
 jobs:
   deploy:
     runs-on: [self-hosted, ARM64, Linux]
@@ -16,12 +14,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Deploy on Rasberry Pi
+      - name: Stop Docker Container
         run: |
-          cd code/test/
+          cd code/test
           docker compose down
+      - name: Install Dependencies and build Frontend
+        run: |
+          cd frontend
+          npm install
+          npm run build --prod
+          cd ..
+      - name: Build Backend
+        run: |
           cd backend/
           mvn clean package
+      - name: Start Docker Container
           cd ..
           docker compose build
           docker compose up -d 
