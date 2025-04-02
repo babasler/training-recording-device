@@ -14,8 +14,8 @@
             </div>
             <ul>
                 <li>
-                    <div class="button-div">
-                            <i class="pi pi-home" style="font-size: 2.2rem"></i>
+                    <div class="button-div" (click)="goToDashboard()" >
+                            <i class="pi pi-home" style="font-size: 2.2rem" ></i>
                             <p class="button-font">Dashboard</p>  
                     </div>
                     <div class="button-div">
@@ -46,5 +46,5 @@
     </p-drawer>   
 </div>
 <div class="sidebar-button">
-    <p-button (click)="visible = true" icon="pi pi-align-justify" size="large" severity="help"></p-button>
+    <p-button (click)="visible =true" icon="pi pi-align-justify" size="large" severity="help"></p-button>
 </div>
