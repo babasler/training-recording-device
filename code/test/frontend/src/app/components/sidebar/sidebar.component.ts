@@ -20,6 +20,19 @@ export class SidebarComponent {
         this.router.navigate(['/dashboard']);
     }
 
+    goToNewExercise(): void {
+        this.router.navigate(['/new/exercise']);
+    }
+
+    goToNewPlan(): void {
+        this.router.navigate(['/new/plan']);
+    }
+    goToStatistic(): void {
+        this.router.navigate(['/statistic']);
+    }
+    goToProfile(): void {
+        this.router.navigate(['/profile']);
+    }
     closeCallback(): void {
         this.visible = false;
     }
