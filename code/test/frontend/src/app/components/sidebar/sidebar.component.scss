@@ -46,3 +46,29 @@ ul{
     margin: 0;
 }
 
+.button-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ac56ea;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Anfangs leichter Schatten */
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    margin : 10px;
+    gap: 10px;
+}
+
+.button-div:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten bei Hover */
+    transform: translateY(-2px); /* Leichte Bewegung nach oben */
+}
+.menu-text{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
