@@ -1,1 +1,48 @@
-@import "primeicons/primeicons.css";
+.sidebar-button{
+    position: fixed;
+    bottom: 2%;
+    left: 1%;
+}
+.brand-name{
+    text-align: left;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+.box-1 {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    left: 5%;
+}
+.box-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 60px;
+    height: 60px;
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 1.5%;
+}
+.box-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    margin-left: 35%;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+

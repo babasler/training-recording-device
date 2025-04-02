@@ -1,10 +1,29 @@
 <div class="card flex justify-center">
-    <p-drawer [(visible)]="visible" header="Drawer">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-        </p>
-    </p-drawer>
-    <p-button (click)="visible = true" icon="pi pi-arrow-right" />
+    <p-drawer [(visible)]="visible">
+        <ng-template #headless>
+            <div class = "container">
+                <div class="box-1">
+                    <img src="/banane.png" height="60" width="60">
+                </div>
+                <div class="box-2">
+                    <p class="brand-name" style="color:black">Banana</p>
+                </div>
+                <div class="box-3">
+                    <p-button icon="pi pi-times" [rounded]="true" [text]="true" [raised]="true" (onClick)="closeCallback()" severity="help"/>
+                </div>
+            </div>
+            <ul>
+                <li>
+                    <div class=>
+                    <p-button label="Secondary" variant="text" severity="help" size="large">
+                        <span><i class="pi pi-user" style="color: black"></i></span>
+                    </p-button>
+                    </div>
+                </li>
+            </ul>
+        </ng-template>
+    </p-drawer>   
+</div>
+<div class="sidebar-button">
+    <p-button (click)="visible = true" icon="pi pi-align-justify" size="large" severity="help"></p-button>
 </div>
