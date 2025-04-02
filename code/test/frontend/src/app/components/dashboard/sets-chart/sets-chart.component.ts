@@ -4,12 +4,12 @@ import { ChangeDetectorRef, Component, inject, OnInit, PLATFORM_ID } from '@angu
 import { ChartModule } from 'primeng/chart';
 
 @Component({
-  selector: 'volume-chart',
+  selector: 'sets-chart',
   imports: [ButtonModule, CommonModule, ChartModule],
-  templateUrl: './volume-chart.component.html',
-  styleUrl: './volume-chart.component.scss'
+  templateUrl: './sets-chart.component.html',
+  styleUrl: './sets-chart.component.scss'
 })
-export class VolumeChartComponent implements OnInit {
+export class SetsChartComponent implements OnInit {
   data: any;
   options: any;
   private platformId = inject(PLATFORM_ID);
@@ -35,7 +35,7 @@ export class VolumeChartComponent implements OnInit {
       datasets: [
         {
           type: 'bar',
-          label: 'Volumen',
+          label: 'Sätze',
           backgroundColor: documentStyle.getPropertyValue('--p-purple-500'),
           data: [50, 25, 12, 48, 90, 76, 42]
         }

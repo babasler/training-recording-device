@@ -39,7 +39,7 @@ export class WeightChartComponent implements OnInit {
       labels: ['01.01', '02.01', '03.01', '04.01', '05.01', '06.01', '07.01'],
       datasets: [
         {
-          label: 'Gewicht',
+          label: 'Körpergewicht',
           data: [86, 87, 86, 87, 88, 89, 90],
           fill: false,
           borderColor: documentStyle.getPropertyValue('--p-purple-500'),

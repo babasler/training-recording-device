@@ -1,11 +1,15 @@
 <div >
     <div>
         <div class="progress-chart" [ngSwitch]="currentDiv">
-            <div *ngSwitchCase="'div1'" class="card">
+            <div *ngSwitchCase="'div1'">
                 <app-weight-chart></app-weight-chart>
             </div>
-            <div *ngSwitchCase="'div2'">Inhalt von Div 2</div>
-            <div *ngSwitchCase="'div3'">Inhalt von Div 3</div>
+            <div *ngSwitchCase="'div2'">
+                <volume-chart></volume-chart>
+            </div>
+            <div *ngSwitchCase="'div3'">
+                <sets-chart></sets-chart>
+            </div>
         </div>
         <div class = "progress-chart-switcher">
             <p-button icon="pi pi-circle-fill" [rounded]="true" [text]="true" severity="contrast" (onClick)="currentDiv = 'div1'"/>

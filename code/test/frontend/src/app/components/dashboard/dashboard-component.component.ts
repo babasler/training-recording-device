@@ -5,11 +5,13 @@ import { ChangeDetectorRef, Component, effect, inject, OnInit, PLATFORM_ID } fro
 //import { AppConfigService } from '../../services/appconfigservice';
 import { ChartModule } from 'primeng/chart';
 import { WeightChartComponent } from "./weight-chart/weight-chart.component";
+import { VolumeChartComponent } from "./volume-chart/volume-chart.component";
+import { SetsChartComponent } from "./sets-chart/sets-chart.component";
 
 
 @Component({
   selector: 'app-dashboard-component',
-  imports: [SidebarComponent, ButtonModule, CommonModule, ChartModule, WeightChartComponent],
+  imports: [SidebarComponent, ButtonModule, CommonModule, ChartModule, WeightChartComponent, VolumeChartComponent, SetsChartComponent],
   templateUrl: './dashboard-component.component.html',
   styleUrl: './dashboard-component.component.scss'
 })
