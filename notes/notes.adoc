@@ -1,7 +1,7 @@
 = Requirements
 Bastian Basler <>
 :description: Anforderungen an das Projekt
-:url-repo: https://github.com/babasler/training-recording-devic
+:url-repo: https://github.com/babasler/training-recording-device
 
 == Notes
 - Ideen für Devices: Smartwatch, Smarte Waage, Smarter Spiegel und Apple App
@@ -13,6 +13,8 @@ Teile davon https://www.amazon.de/dp/B08DV1YW43/ref=sspa_dk_detail_5?psc=1&pf_rd
 Beispiel mit dem Display: https://www.youtube.com/watch?v=g4ZVXwt5ueA
 
 Uhr-gui https://docs.lvgl.io/master/details/base-widget/obj.html#active-screen
+
+Wie man die Garmin Website: https://github.com/tcgoetz/GarminDB
 
 
 

@@ -1,22 +1,60 @@
-<div >
-    <div>
-        <div class="progress-chart" [ngSwitch]="currentDiv">
-            <div *ngSwitchCase="'div1'">
-                <app-weight-chart></app-weight-chart>
+<div>
+    <div class="dashboard-header">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="dashboard-content">
+
+    <div class="dashboard-content-upper">
+        <div class ="dashboard-overview">
+            <div class="progress-chart-header">
+                <h3 class="chart-title">Übersicht</h3>
             </div>
-            <div *ngSwitchCase="'div2'">
-                <volume-chart></volume-chart>
+
+            <div class="progress-chart" [ngSwitch]="currentDiv">
+                <div *ngSwitchCase="'div1'">
+                    <app-weight-chart></app-weight-chart>
+                </div>
+                <div *ngSwitchCase="'div2'">
+                    <volume-chart></volume-chart>
+                </div>
+                <div *ngSwitchCase="'div3'">
+                    <sets-chart></sets-chart>
+                </div>
+                <select-periode-bar></select-periode-bar>
             </div>
-            <div *ngSwitchCase="'div3'">
-                <sets-chart></sets-chart>
+
+            <div class="progress-chart-switcher">
+                <div class="progress-chart-switcher-buttons">
+                    <p-button
+                        icon="pi pi-circle-fill"
+                        [rounded]="true"
+                        [text]="true"
+                        severity="contrast"
+                        (onClick)="currentDiv = 'div1'"
+                    ></p-button>
+                    <p-button
+                        icon="pi pi-circle-fill"
+                        [rounded]="true"
+                        [text]="true"
+                        severity="contrast"
+                        (onClick)="currentDiv = 'div2'"
+                    ></p-button>
+                    <p-button
+                        icon="pi pi-circle-fill"
+                        [rounded]="true"
+                        [text]="true"
+                        severity="contrast"
+                        (onClick)="currentDiv = 'div3'"
+                    ></p-button>
+                </div>
             </div>
-            <select-periode-bar></select-periode-bar>
+
         </div>
-        <div class = "progress-chart-switcher">
-            <p-button icon="pi pi-circle-fill" [rounded]="true" [text]="true" severity="contrast" (onClick)="currentDiv = 'div1'"/>
-            <p-button icon="pi pi-circle-fill" [rounded]="true" [text]="true" severity="contrast" (onClick)="currentDiv = 'div2'"/>
-            <p-button icon="pi pi-circle-fill" [rounded]="true" [text]="true" severity="contrast" (onClick)="currentDiv = 'div3'"/>
+        <div class="activity">
+            <last-activity></last-activity>
         </div>
     </div>
+    </div>
+
     <sidebar></sidebar>
 </div>

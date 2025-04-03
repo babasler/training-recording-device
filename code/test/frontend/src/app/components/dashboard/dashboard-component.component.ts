@@ -8,11 +8,12 @@ import { WeightChartComponent } from "./weight-chart/weight-chart.component";
 import { VolumeChartComponent } from "./volume-chart/volume-chart.component";
 import { SetsChartComponent } from "./sets-chart/sets-chart.component";
 import { SelectPeriodeBarComponent } from "./select-periode-bar/select-periode-bar.component";
+import { LastActivityComponent } from "./last-activity/last-activity.component";
 
 
 @Component({
   selector: 'app-dashboard-component',
-  imports: [SidebarComponent, ButtonModule, CommonModule, ChartModule, WeightChartComponent, VolumeChartComponent, SetsChartComponent, SelectPeriodeBarComponent],
+  imports: [SidebarComponent, ButtonModule, CommonModule, ChartModule, WeightChartComponent, VolumeChartComponent, SetsChartComponent, SelectPeriodeBarComponent, LastActivityComponent],
   templateUrl: './dashboard-component.component.html',
   styleUrl: './dashboard-component.component.scss'
 })
