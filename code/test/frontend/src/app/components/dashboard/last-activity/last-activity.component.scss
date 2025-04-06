@@ -1,31 +1,39 @@
+.last-activity-card{
+    margin-left: 5vw;
+}
+
 .last-activity-header {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: grey;
-    width: 35vh;
+    width: 15vw;
     height: 10vh;
     border-radius: 10px;
 }
 
 .chart-title {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
 .last-activity-content {
+    background-color: lightgrey;
+    width: 15vw;
+    height: 20vh;
+    border-radius: 10px;
+}
+.content{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: lightgrey;
-    width: 35vh;
-    height: 25vh;
-    border-radius: 10px;
 }
 
 .chart-image {
-    width: 160px;
-    height: 160px;
+    width: 9vw;
+    height: auto;
+    align-self: center;
 }
 .chart-text {
     font-size: 1.2rem;
