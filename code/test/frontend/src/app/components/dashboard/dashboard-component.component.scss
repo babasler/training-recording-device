@@ -9,22 +9,15 @@
     flex-direction: row;
     width: 100%;
     height: 100%;
-    background-color: aquamarine;
+    gap: 2%;
+    //background-color: aquamarine;
 }
 .dashboard-overview{
     display: flex;
     flex-direction: column;
     width: 50vw;
     height: 100%;
-    background-color: #f0f0f0;
-}
-.progress-chart-header{
-    display: flex;
-    margin-left: 7%;
-    background-color: salmon;
-    height: 5vh;
-    align-items: bottom;
-    width: 100vw;
+    //background-color: #f0f0f0;
 }
 .progress-chart{
     display: flex;
@@ -32,9 +25,6 @@
     height: 45vh;
     border-radius: 15px;
     //background-color: aqua;
-    justify-content: center;
-    align-items: center;
-    gap: 2%;
     margin-left: 4%;
 }
 
@@ -45,22 +35,22 @@
     border-radius: 15px;
     margin-left: 4%;
     align-items: center;
-    background-color: blue;
+    //background-color: blue;
 }
 
 .dashboard-header{
     display: flex;
-    flex-direction: column;
-    margin-top: 1%;
-    background-color: red;
+    align-items: center;
+    //background-color: red;
     margin-left: 2%;
-    width: 50vw;
+    width: 13vw;
+    height: 8vh;
 }
 
 .progress-chart-switcher-buttons{
     display: flex;
-    margin-left: 23%;
-    gap: 15%;
+    margin-left: 10vh;
+    gap: 8vh;
 }
 
 .activity{
@@ -70,6 +60,5 @@
     width: 46vw;
     height: 51vh;
     border-radius: 15px;
-    background-color: lightblue;
-    margin-top: 5vh; 
+    //background-color: lightblue;
 }
