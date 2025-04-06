@@ -1,15 +1,12 @@
 <div>
     <div class="dashboard-header">
         <h1>Dashboard</h1>
-        <h3>Willkommen {{ userName }}!</h3>
     </div>
+    
     <div class="dashboard-content">
 
     <div class="dashboard-content-upper">
         <div class ="dashboard-overview">
-            <div class="progress-chart-header">
-                <h3 class="chart-title">Übersicht</h3>
-            </div>
 
             <div class="progress-chart" [ngSwitch]="currentDiv">
                 <div *ngSwitchCase="'div1'">
@@ -53,6 +50,7 @@
         </div>
         <div class="activity">
             <last-activity></last-activity>
+            <next-activity></next-activity>
         </div>
     </div>
     </div>

@@ -1,1 +1,22 @@
-<p>last-activity works!</p>
+<div>
+    <div class="last-activity-header">
+        <h3 class="chart-title">Letzte Aktivität</h3>
+    </div>
+
+    <div class="last-activity-content">
+            <div class="progress-chart" [ngSwitch]="lastActivity">
+                <div *ngSwitchCase="'gym'">
+                    <img 
+                    src="/hantel-2.png" 
+                    alt="Last Activity Chart" 
+                    class="chart-image">
+                    <div class ="chart-text">
+                        <p>Ganzkörper-Trainig</p>  <!-- Hier noch dynamischen Text einfügen -->
+                    </div>
+                </div>
+                
+
+            </div>
+
+    </div>
+</div>

@@ -16,7 +16,7 @@
     flex-direction: column;
     width: 50vw;
     height: 100%;
-    //background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 .progress-chart-header{
     display: flex;
@@ -31,7 +31,7 @@
     width: 46vw;
     height: 45vh;
     border-radius: 15px;
-    background-color: aqua;
+    //background-color: aqua;
     justify-content: center;
     align-items: center;
     gap: 2%;
@@ -54,6 +54,7 @@
     margin-top: 1%;
     background-color: red;
     margin-left: 2%;
+    width: 50vw;
 }
 
 .progress-chart-switcher-buttons{
@@ -64,7 +65,8 @@
 
 .activity{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     width: 46vw;
     height: 51vh;
     border-radius: 15px;

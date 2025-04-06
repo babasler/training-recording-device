@@ -1,0 +1,36 @@
+.last-activity-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    width: 35vh;
+    height: 10vh;
+    border-radius: 10px;
+}
+
+.chart-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.last-activity-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgrey;
+    width: 35vh;
+    height: 25vh;
+    border-radius: 10px;
+}
+
+.chart-image {
+    width: 160px;
+    height: 160px;
+}
+.chart-text {
+    font-size: 1.2rem;
+    font-weight: normal;
+    margin-left: 10px;
+    align-self: center;
+}
+
