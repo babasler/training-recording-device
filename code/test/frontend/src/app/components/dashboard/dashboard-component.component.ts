@@ -19,4 +19,5 @@ import { LastActivityComponent } from "./last-activity/last-activity.component";
 })
 export class DashboardComponent{
   currentDiv: string = 'div1'; // Startwert
+  userName: string = 'Max Mustermann';
 }
