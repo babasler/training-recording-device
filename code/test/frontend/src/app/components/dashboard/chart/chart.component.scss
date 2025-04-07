@@ -1,14 +1,14 @@
-.last-activity-card{
+.chart-card{
     margin-left: 5vw;
 }
 
-.last-activity-header {
+.chart-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: grey;
-    width: 15vw;
-    height: 10vh;
+    background-color: #a661c4;
+    width: 13vw;
+    height: 6vh;
     border-radius: 10px;
 }
 
@@ -17,10 +17,10 @@
     font-weight: bold;
 }
 
-.last-activity-content {
-    background-color: lightgrey;
-    width: 15vw;
-    height: 20vh;
+.chart-content {
+    background-color: white;
+    width: 13vw;
+    height: 18vh;
     border-radius: 10px;
 }
 .content{
@@ -31,14 +31,13 @@
 }
 
 .chart-image {
-    width: 9vw;
+    width: 7vw;
     height: auto;
     align-self: center;
 }
 .chart-text {
     font-size: 1.2rem;
     font-weight: normal;
-    margin-left: 10px;
     align-self: center;
 }
 

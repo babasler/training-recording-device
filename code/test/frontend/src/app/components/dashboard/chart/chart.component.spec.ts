@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LastActivityComponent } from './last-activity.component';
+import { LastActivityComponent } from './chart.component';
 
 describe('LastActivityComponent', () => {
   let component: LastActivityComponent;

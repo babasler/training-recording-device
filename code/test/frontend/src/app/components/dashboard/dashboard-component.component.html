@@ -1,59 +1,66 @@
 <div>
+    <!-- Dashboard Header -->
     <div class="dashboard-header">
         <h1>Dashboard</h1>
     </div>
-    
-    <div class="dashboard-content">
 
-    <div class="dashboard-content-upper">
-        <div class ="dashboard-overview">
+    <!-- Dashboard Content -->
+    <div class="dashboard-content"></div>
+        <div class="dashboard-content-upper">
+            <div class="dashboard-conten-upper-background">
+            <!-- Dashboard Overview -->
+            <div class="dashboard-overview">
+                <!-- Progress Chart -->
+                <div class="progress-chart" [ngSwitch]="currentDiv">
+                    <div *ngSwitchCase="'div1'">
+                        <app-weight-chart></app-weight-chart>
+                    </div>
+                    <div *ngSwitchCase="'div2'">
+                        <volume-chart></volume-chart>
+                    </div>
+                    <div *ngSwitchCase="'div3'">
+                        <sets-chart></sets-chart>
+                    </div>
+                </div>
 
-            <div class="progress-chart" [ngSwitch]="currentDiv">
-                <div *ngSwitchCase="'div1'">
-                    <app-weight-chart></app-weight-chart>
+                <!-- Progress Chart Switcher -->
+                <div class="progress-chart-switcher">
+                    <select-periode-bar style="margin-bottom: 2vh;"></select-periode-bar>
+                    <div class="progress-chart-switcher-buttons">
+                        <p-button
+                            icon="pi pi-circle-fill"
+                            [rounded]="true"
+                            [text]="true"
+                            severity="contrast"
+                            (onClick)="currentDiv = 'div1'"
+                        ></p-button>
+                        <p-button
+                            icon="pi pi-circle-fill"
+                            [rounded]="true"
+                            [text]="true"
+                            severity="contrast"
+                            (onClick)="currentDiv = 'div2'"
+                        ></p-button>
+                        <p-button
+                            icon="pi pi-circle-fill"
+                            [rounded]="true"
+                            [text]="true"
+                            severity="contrast"
+                            (onClick)="currentDiv = 'div3'"
+                        ></p-button>
+                    </div>
                 </div>
-                <div *ngSwitchCase="'div2'">
-                    <volume-chart></volume-chart>
-                </div>
-                <div *ngSwitchCase="'div3'">
-                    <sets-chart></sets-chart>
-                </div>
-                <select-periode-bar></select-periode-bar>
             </div>
-
-            <div class="progress-chart-switcher">
-                <div class="progress-chart-switcher-buttons">
-                    <p-button
-                        icon="pi pi-circle-fill"
-                        [rounded]="true"
-                        [text]="true"
-                        severity="contrast"
-                        (onClick)="currentDiv = 'div1'"
-                    ></p-button>
-                    <p-button
-                        icon="pi pi-circle-fill"
-                        [rounded]="true"
-                        [text]="true"
-                        severity="contrast"
-                        (onClick)="currentDiv = 'div2'"
-                    ></p-button>
-                    <p-button
-                        icon="pi pi-circle-fill"
-                        [rounded]="true"
-                        [text]="true"
-                        severity="contrast"
-                        (onClick)="currentDiv = 'div3'"
-                    ></p-button>
-                </div>
             </div>
-
         </div>
-        <div class="activity">
-            <last-activity></last-activity>
-            <next-activity></next-activity>
-        </div>
-    </div>
-    </div>
 
-    <sidebar></sidebar>
-</div>
+        <!-- Activity Section -->
+        <div class="dashboard-content-bottom">
+            @for(chart of chartsData ; track chartsData){
+                <chart [header]="chart.header" [image]="chart.image" [description]="chart.description"></chart>
+            }
+        </div>
+
+        <!-- Sidebar -->
+        <sidebar></sidebar>
+    </div>
