@@ -50,13 +50,18 @@ export class DashboardComponent{
       {
         header: 'Trainingsdauer',
         image: './repeat.png',
-        description: 'Durchschnittlich X min'
+        description: '7 Tage: Xh Xmin'
       },
       {
         header: 'Puls',
         image: './cardiogram.png',
         description: 'Durchnittlich X bpm'
-      }
+      },
+      {
+        header: 'Aktuelles Gewicht',
+        image: './weight-scale.png',
+        description: 'X kg'
+      },
     ];
   }
 }

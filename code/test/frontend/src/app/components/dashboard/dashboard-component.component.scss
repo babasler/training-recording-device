@@ -46,9 +46,11 @@
 .dashboard-content-bottom{
     display: flex;
     flex-direction: row;
-    gap: 5vw;
+    align-items: center;
+    justify-content: center;
+    gap : 6vw;
     width: auto;
     height: auto;
     border-radius: 15px;
-    background-color: lightblue;
+    //background-color: lightblue;
 }
