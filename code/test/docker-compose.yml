@@ -7,7 +7,7 @@ services:
     networks:
       - trd-net
     depends_on:
-      - postgres
+      - arm64v8/postgres:15
   frontend:
     build: ./frontend
     container_name: frontend
