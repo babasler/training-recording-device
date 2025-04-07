@@ -7,7 +7,7 @@ services:
     networks:
       - trd-net
     depends_on:
-      - arm64v8/postgres:15
+      - postgres
   frontend:
     build: ./frontend
     container_name: frontend
@@ -20,7 +20,7 @@ services:
     networks:
         - trd-net
   postgres:
-    image: postgres:15
+    image: arm64v8/postgres:15
     container_name: postgres
     restart: always
     environment:
