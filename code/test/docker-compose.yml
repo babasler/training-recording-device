@@ -20,7 +20,7 @@ services:
     networks:
         - trd-net
   postgres:
-    image: arm64v8/postgres:15
+    image: postgres:15
     container_name: postgres
     restart: always
     environment:
