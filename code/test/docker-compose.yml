@@ -30,7 +30,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/home/pi/postgres/data
+      - pgdata:/home/pi/actions-runner/_work/training-recording-device/training-recording-device/code/test/postgres/data
     networks:
       - trd-net
 
