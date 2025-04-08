@@ -39,7 +39,7 @@ export class DashboardComponent{
 
   getChartsData(): void {
     // Replace 'your-api-endpoint-url' with the actual API endpoint if needed
-    this.http.get<chartData[]>('http://backend:8084/api/').subscribe(data => {
+    this.http.get<chartData[]>('http://backend:8084/data').subscribe(data => {
       this.chartsData = data;
     });
   }
