@@ -8,6 +8,7 @@ import { VolumeChartComponent } from "./volume-chart/volume-chart.component";
 import { SetsChartComponent } from "./sets-chart/sets-chart.component";
 import { SelectPeriodeBarComponent } from "./select-periode-bar/select-periode-bar.component";
 import { LastActivityComponent } from "./chart/chart.component";
+import { HttpClient } from "@angular/common/http";
 
 interface chartData{
   header: string,
@@ -29,39 +30,17 @@ export class DashboardComponent{
   //chartsData: Observable<chartData[]> = of([]);
   chartsData: Array<chartData> = [];
 
+  constructor(private http: HttpClient) { }
+
 
   async ngOnInit() {
-    this.chartsData = this.getChartsData();
+    this.getChartsData();
   }
 
-  getChartsData(): chartData[] {
+  getChartsData(): void {
     // Replace 'your-api-endpoint-url' with the actual API endpoint if needed
-    return [
-      {
-        header: 'Nächstes Training',
-        image: './hantel-2.png',
-        description: 'Ganzkörpertraining'
-      },
-      {
-        header: 'Letztes Training',
-        image: './hantel-2.png',
-        description: 'Ganzkörpertraining'
-      },
-      {
-        header: 'Trainingsdauer',
-        image: './repeat.png',
-        description: '7 Tage: Xh Xmin'
-      },
-      {
-        header: 'Puls',
-        image: './cardiogram.png',
-        description: 'Durchnittlich X bpm'
-      },
-      {
-        header: 'Aktuelles Gewicht',
-        image: './weight-scale.png',
-        description: 'X kg'
-      },
-    ];
+    this.http.get<chartData[]>('http://backend:8084/api/').subscribe(data => {
+      this.chartsData = data;
+    });
   }
 }
