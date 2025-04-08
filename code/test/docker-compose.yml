@@ -30,7 +30,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data 
+      - pgdata:/home/pi/postgres/data
     networks:
       - trd-net
 
@@ -40,3 +40,4 @@ networks:
 
 volumes:
   pgdata:
+    name: pgdata
