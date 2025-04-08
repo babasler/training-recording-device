@@ -28,7 +28,32 @@ export class DashboardComponent{
   userName: string = 'Max Mustermann';
 
   //chartsData: Observable<chartData[]> = of([]);
-  chartsData: Array<chartData> = [];
+  chartsData: Array<chartData> = [{
+    header: 'Nächstes Training',
+    image: './hantel-2.png',
+    description: 'Ganzkörpertraining'
+  },
+  {
+    header: '',
+    image: '',
+    description: ''
+  },
+  {
+    header: '',
+    image: '',
+    description: ''
+  },
+  {
+    header: '',
+    image: '',
+    description: ''
+  },
+  {
+    header: ' ',
+    image: '',
+    description: ''
+  },
+];
 
   constructor(private http: HttpClient) { }
 
@@ -39,7 +64,7 @@ export class DashboardComponent{
 
   getChartsData(): void {
     // Replace 'your-api-endpoint-url' with the actual API endpoint if needed
-    this.http.get<chartData[]>('http://backend:8084/da').subscribe({
+    this.http.get<chartData[]>('http://backend:8084/data').subscribe({
       next: (data) => {
         this.chartsData = data;
       },

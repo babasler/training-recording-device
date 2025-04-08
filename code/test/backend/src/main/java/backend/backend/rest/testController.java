@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class testController {
     @GetMapping("/data")
     public List<chartResponse> getChartData() {
-       
+       System.out.println("testController got called");
         List<chartResponse> responses = new LinkedList<>();
         responses.add(new chartResponse("Nächstes Training", "./hantel-2.png", "Ganzkörpertraining"));
         responses.add(new chartResponse("Letztes Training", "./hantel-2.png", "Ganzkörpertraining"));
