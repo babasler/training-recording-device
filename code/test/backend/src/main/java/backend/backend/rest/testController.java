@@ -1,16 +1,20 @@
 package backend.backend.rest;
+
 import java.util.LinkedList;
 import java.util.List;
-
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 @RestController
 public class testController {
+    private static final Logger logger = LoggerFactory.getLogger(testController.class);
+
     @GetMapping("/data")
     public List<chartResponse> getChartData() {
-       System.out.println("testController got called");
+        logger.info("GET request received for /data");
         List<chartResponse> responses = new LinkedList<>();
         responses.add(new chartResponse("Nächstes Training", "./hantel-2.png", "Ganzkörpertraining"));
         responses.add(new chartResponse("Letztes Training", "./hantel-2.png", "Ganzkörpertraining"));
