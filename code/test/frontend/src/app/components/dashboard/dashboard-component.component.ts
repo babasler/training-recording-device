@@ -39,8 +39,13 @@ export class DashboardComponent{
 
   getChartsData(): void {
     // Replace 'your-api-endpoint-url' with the actual API endpoint if needed
-    this.http.get<chartData[]>('http://backend:8084/data').subscribe(data => {
-      this.chartsData = data;
+    this.http.get<chartData[]>('http://backend:8084/da').subscribe({
+      next: (data) => {
+        this.chartsData = data;
+      },
+      error: (error) => {
+        console.error('Error fetching data:', error);
+      }
     });
   }
 }
