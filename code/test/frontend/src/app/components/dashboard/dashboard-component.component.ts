@@ -62,15 +62,12 @@ export class DashboardComponent{
     this.getChartsData();
   }
 
-  getChartsData(): void {
-    // Replace 'your-api-endpoint-url' with the actual API endpoint if needed
-    this.http.get<chartData[]>('http://backend:8084/data').subscribe({
-      next: (data) => {
-        this.chartsData = data;
-      },
-      error: (error) => {
-        console.error('Error fetching data:', error);
-      }
-    });
+  async getChartsData(): Promise<void> {
+    try {
+      const data = await this.http.get<chartData[]>('http://backend:8084/data').toPromise();
+      this.chartsData = data || [];
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
   }
 }
