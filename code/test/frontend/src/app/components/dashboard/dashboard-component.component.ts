@@ -7,67 +7,37 @@ import { WeightChartComponent } from "./weight-chart/weight-chart.component";
 import { VolumeChartComponent } from "./volume-chart/volume-chart.component";
 import { SetsChartComponent } from "./sets-chart/sets-chart.component";
 import { SelectPeriodeBarComponent } from "./select-periode-bar/select-periode-bar.component";
-import { LastActivityComponent } from "./chart/chart.component";
-import { HttpClient } from "@angular/common/http";
 
-interface chartData{
-  header: string,
-  image: string,
-  description: string
-}
 
 @Component({
   selector: 'app-dashboard-component',
-  imports: [SidebarComponent, ButtonModule, CommonModule, ChartModule, WeightChartComponent, VolumeChartComponent, SetsChartComponent, SelectPeriodeBarComponent, LastActivityComponent],
+  imports: [SidebarComponent, ButtonModule, CommonModule, ChartModule, WeightChartComponent, VolumeChartComponent, SetsChartComponent, SelectPeriodeBarComponent],
   templateUrl: './dashboard-component.component.html',
-  styleUrl: './dashboard-component.component.scss'
+  styleUrls: ['./dashboard-component.component.scss'],
+  standalone: true,
 })
 export class DashboardComponent{
 
   currentDiv: string = 'div1'; // Startwert
   userName: string = 'Max Mustermann';
 
-  //chartsData: Observable<chartData[]> = of([]);
-  chartsData: Array<chartData> = [{
-    header: 'Nächstes Training',
-    image: './hantel-2.png',
-    description: 'Ganzkörpertraining'
-  },
-  {
-    header: '',
-    image: '',
-    description: ''
-  },
-  {
-    header: '',
-    image: '',
-    description: ''
-  },
-  {
-    header: '',
-    image: '',
-    description: ''
-  },
-  {
-    header: ' ',
-    image: '',
-    description: ''
-  },
-];
+  data: string = '';
 
-  constructor(private http: HttpClient) { }
 
+  constructor() {
+    
+  }
 
   async ngOnInit() {
-    this.getChartsData();
+    await fetch('http://localhost:8084/data').then(async response => {
+      this.data = await response.text();
+    }
+    ).catch(error => {
+      console.error('Error fetching data:', error);
+    });
+    console.log(this.data);
   }
 
-  async getChartsData(): Promise<void> {
-    try {
-      const data = await this.http.get<chartData[]>('http://backend:8084/data').toPromise();
-      this.chartsData = data || [];
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  }
+
+
 }
