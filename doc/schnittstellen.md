@@ -1,30 +1,42 @@
 # Schnittstellendefinition
-## Dashboardcharts -> Backend
+## Dashboardcharts -> Backend /data/[Component]
+### Nächstes Training
+Pfad : /data/nextTraining
 ```json
 {
-        header: 'Nächstes Training',
-        image: './hantel-2.png',
-        description: 'Ganzkörpertraining'
-      },
-      {
-        header: 'Letztes Training',
-        image: './hantel-2.png',
-        description: 'Ganzkörpertraining'
-      },
-      {
-        header: 'Trainingsdauer',
-        image: './repeat.png',
-        description: '7 Tage: Xh Xmin'
-      },
-      {
-        header: 'Puls',
-        image: './cardiogram.png',
-        description: 'Durchnittlich X bpm'
-      },
-      {
-        header: 'Aktuelles Gewicht',
-        image: './weight-scale.png',
-        description: 'X kg'
-      },
-    ];
+header: 'Nächstes Training',
+description: 'Ganzkörpertraining'
+}
+```
+### Letztes Training
+Pfad: /data/lastTraining
+```json
+{
+header: 'Letztes Training',
+description: 'Ganzkörpertraining'
+}
+```
+### Trainingdauer der letzten sieben Tage
+Pfad: /data/trainingDuration
+```json
+{
+header: 'Trainingsdauer',
+description: '7 Tage: Xh Xmin'
+}
+```
+### Durschnittlicher Puls der letzen sieben Tage
+Pfad: /data/pulse
+```json
+{
+header: 'Puls',
+description: 'Durchnittlich X bpm'
+}
+````
+### Akutelles Gewicht
+Pfad: /data/weight 
+```json
+{
+header: 'Aktuelles Gewicht',
+description: 'X kg'
+}
 ```

@@ -7,12 +7,10 @@ import lombok.Setter;
 @Setter
 public class chartResponse {
     private String header;
-    private String image;
     private String description;
 
-    public chartResponse(String header, String image, String description) {
+    public chartResponse(String header,String description) {
         this.header = header;
-        this.image = image;
         this.description = description;
     }
     
