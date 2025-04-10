@@ -32,7 +32,7 @@ services:
       - "3306:3306"
     volumes:
       - type: volume
-        source: mysql-data
+        source: mysql_data
         target: /var/lib/mysql    
     networks:
       - trd-net
