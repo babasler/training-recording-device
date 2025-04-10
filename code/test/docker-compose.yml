@@ -31,7 +31,9 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - :/var/lib/mysql                # Persistente Speicherung der Daten
+      - type: volume
+        source: mysql-data
+        target: /var/lib/mysql    
     networks:
       - trd-net
 
@@ -41,4 +43,5 @@ networks:
 
 volumes:
   mysql_data:
+    driver: local
     
