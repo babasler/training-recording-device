@@ -21,7 +21,7 @@ services:
         - trd-net
   postgres:
     container_name: db
-    build: .
+    build: ./postgres
     env_file: .env
     environment:
       - POSTGRES_USER=postgres
