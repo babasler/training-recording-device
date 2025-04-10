@@ -20,17 +20,19 @@ services:
     networks:
         - trd-net
   postgres:
-    image: postgres:15
-    container_name: postgres
-    restart: always
+    database:
+    container_name: db
+    build: .
+    env_file: .env
     environment:
-      POSTGRES_DB: mydb
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-    ports:
-      - "5432:5432"
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password@7979
+      - POSTGRES_DB=db
     volumes:
       - ./db_data:/var/lib/postgresql
+    ports:
+      - "5432:5432"
+    restart: always
 
     networks:
       - trd-net
