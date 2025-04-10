@@ -8,6 +8,8 @@ header: 'Nächstes Training',
 description: 'Ganzkörpertraining'
 }
 ```
+Der Header für die nächste Trainingseinheit ist immer gleich. Die Description Variiert nach Trainingsplan und ist immer der Name der Trainingseinheit die als nächstes ansteht. Zum Beispiel Ganzkörper, Oberkörper, Unterkörper, Push, Pull, Legs etc. 
+
 ### Letztes Training
 Pfad: /data/lastTraining
 ```json
