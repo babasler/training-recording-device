@@ -8,6 +8,8 @@ jobs:
   deploy:
     runs-on: [self-hosted, ARM64, Linux]
     steps:
+      - name: Benutzer ermitteln
+        run: whoami
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Setup Node
@@ -32,5 +34,5 @@ jobs:
         run: |
           cd code/test
           docker compose build
-          docker compose up -d 
+          sudo docker compose up -d 
           
