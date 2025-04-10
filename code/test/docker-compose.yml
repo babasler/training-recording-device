@@ -33,7 +33,7 @@ services:
     volumes:
       - type: volume
         source: mysql_data
-        target: /var/lib/mysql    
+        target: /home/pi/database   
     networks:
       - trd-net
 
