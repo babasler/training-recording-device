@@ -31,9 +31,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql_data:/var/lib/mysql                # Persistente Speicherung der Daten
-
-
+      - :/var/lib/mysql                # Persistente Speicherung der Daten
     networks:
       - trd-net
 
