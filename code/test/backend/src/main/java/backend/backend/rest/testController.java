@@ -9,8 +9,7 @@ public class testController {
     @GetMapping("/data/nexTraining")
     public chartResponse getNextTraining() {
         //Hier muss noch ne Datenbankoperation rein
-        return new chartResponse("Nächstes Training", "Ganzkörpertraining");
-       
+        return new chartResponse("Nächstes Training", "Ganzkörpertraining");  
     }
 
     @GetMapping("/data/lastTraining")

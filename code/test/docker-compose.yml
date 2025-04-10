@@ -20,7 +20,7 @@ services:
     networks:
         - trd-net
   postgres:
-    image: postgres:15
+    build: ./postgres
     container_name: postgres
     restart: always
     environment:
