@@ -24,10 +24,11 @@ services:
     container_name: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: my-root-password       # Root-Passwort setzen
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/mydatabase
+      MYSQL_ROOT_PASSWORD: password       # Root-Passwort setzen
       MYSQL_DATABASE: mydatabase                  # Automatisch erstellte Datenbank
       MYSQL_USER: myuser                          # Benutzer anlegen
-      MYSQL_PASSWORD: myuser-password             # Passwort für den Benutzer
+      MYSQL_PASSWORD: mypassword             # Passwort für den Benutzer
     ports:
       - "3306:3306"
     volumes:
