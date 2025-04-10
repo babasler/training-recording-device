@@ -30,7 +30,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - ./db_data:/var/lib/postgresql
+
     networks:
       - trd-net
 
@@ -39,6 +40,6 @@ networks:
         driver: bridge
 
 volumes:
-  pgdata:
-    name: pgdata
+  db_data:
     driver: local
+    
