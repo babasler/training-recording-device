@@ -9,13 +9,17 @@ docker compose down
 git pull
 
 #build the project
-cd /frontend
+cd ./frontend
+pwd
 npm install
 npm run build
 
-cd ../backend
+cd ..
+cd ./backend
+pwd
 mvn clean package -DskipTests
 
 #build the docker image and run the container
 cd ..
+pwd
 docker compose up -d --build
