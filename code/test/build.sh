@@ -22,4 +22,5 @@ mvn clean package -DskipTests
 #build the docker image and run the container
 cd ..
 pwd
-docker compose up -d --build
+docker compose up -d
+docker ps 
