@@ -27,7 +27,6 @@ services:
       POSTGRES_DB: mydb
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
-      PGDATA: /var/lib/postgresql/data/pgdata
     ports:
       - "5432:5432"
     volumes:
@@ -42,4 +41,4 @@ networks:
 volumes:
   pgdata:
     name: pgdata
-    external: true
+    driver: local
