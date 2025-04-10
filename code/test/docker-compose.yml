@@ -22,7 +22,7 @@ services:
   postgres:
     container_name: db
     build: ./postgres
-    env_file: .env
+    #env_file: .env
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password@7979
