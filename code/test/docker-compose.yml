@@ -19,19 +19,20 @@ services:
       - backend
     networks:
         - trd-net
-  postgres:
-    container_name: db
-    build: ./postgres
-    #env_file: .env
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password@7979
-      - POSTGRES_DB=db
-    volumes:
-      - ./db_data:/var/lib/postgresql
-    ports:
-      - "5432:5432"
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
     restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: my-root-password       # Root-Passwort setzen
+      MYSQL_DATABASE: mydatabase                  # Automatisch erstellte Datenbank
+      MYSQL_USER: myuser                          # Benutzer anlegen
+      MYSQL_PASSWORD: myuser-password             # Passwort für den Benutzer
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql                # Persistente Speicherung der Daten
+
 
     networks:
       - trd-net
@@ -41,6 +42,5 @@ networks:
         driver: bridge
 
 volumes:
-  db_data:
-    driver: local
+  mysql_data:
     
