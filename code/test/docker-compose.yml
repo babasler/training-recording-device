@@ -7,7 +7,7 @@ services:
     networks:
       - trd-net
     depends_on:
-      - postgres
+      - mysql
   frontend:
     build: ./frontend
     container_name: frontend
