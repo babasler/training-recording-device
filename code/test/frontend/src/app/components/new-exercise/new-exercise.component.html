@@ -1,2 +1,70 @@
-<p>new-exercise works!</p>
+<div>
+    <div class="new-exercise-header">
+        <h1>Neue Übung erstellen</h1>
+    </div>
+    <div class="new-exercise-content">
+        <div class="new-exercise-container">
+            <div class="new-exercise-container-header">
+                <h2>Name der Übung</h2>
+            </div>
+            <div class="input-text-wrapper">
+                <div class="card flex justify-center">
+                    <input  pInputText 
+                            type="text" 
+                            [(ngModel)]="value" 
+                            placeholder="Übung" 
+                            size="large">
+                </div>
+            </div>
+        </div>
+        <div class="new-exercise-container">
+            <div class="new-exercise-container-header">
+                <h2>Zielmuskelgruppe wählen</h2>
+            </div>
+            <div class="muscle-selector-wrapper">
+                <muscle-selector></muscle-selector>
+            </div>
+        </div>
+        <div class="new-exercise-container">
+            <div class="new-exercise-container-header">
+                <h2>Benötigtes Equipment</h2>
+            
+            </div>
+            <div class="box">
+                <label class="item">
+                    <input type="radio" name="item" class="radio-btn">
+                    <img src="https://via.placeholder.com/20" alt="Icon 1" class="icon">
+                    Zeile 1
+                </label>
+                <label class="item">
+                    <input type="radio" name="item" class="radio-btn">
+                    <img src="https://via.placeholder.com/20" alt="Icon 2" class="icon">
+                    Zeile 2
+                </label>
+                <label class="item">
+                    <input type="radio" name="item" class="radio-btn">
+                    <img src="https://via.placeholder.com/20" alt="Icon 3" class="icon">
+                    Zeile 3
+                </label>
+                <label class="item">
+                    <input type="radio" name="item" class="radio-btn">
+                    <img src="https://via.placeholder.com/20" alt="Icon 4" class="icon">
+                    Zeile 4
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="new-exercise-footer">
+        <p-button   label="Save" 
+                    icon="pi pi-check" 
+                    size="large" 
+                    severity="secondary" 
+                    [disabled]="isDisabled"/>
+        <p-button   label="Delete" 
+                    icon="pi pi-trash" 
+                    size="large" 
+                    severity="secondary"
+                    (onClick)="deleteMuscleSelection()"/>
+    </div>
+</div>
 <sidebar></sidebar>
