@@ -56,7 +56,26 @@
 
         <!-- Activity Section -->
         <div class="dashboard-content-bottom">
-            <p>{{data}}</p>
+            <chart  [header]="lastTraining.header" 
+                    [image]="'./hantel-2.png'" 
+                    [description]="lastTraining.description">
+            </chart>
+            <chart  [header]="nextTraining.header" 
+                    [image]="'./hantel-2.png'" 
+                    [description]="nextTraining.description">
+            </chart>
+            <chart  [header]="trainingDuration.header" 
+                    [image]="'./repeat.png'" 
+                    [description]="trainingDuration.description">
+            </chart>
+            <chart  [header]="pulse.header" 
+                    [image]="'./cardiogram.png'" 
+                        [description]="pulse.description">
+            </chart>
+            <chart  [header]="weight.header" 
+                    [image]="'./weight-scale.png'" 
+                    [description]="weight.description">
+            </chart>
         </div>
         
         <!-- Sidebar -->
