@@ -1,0 +1,15 @@
+.equiment-selector-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.equipment-item{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.equipment-listbox{
+    width: 35vb;
+}

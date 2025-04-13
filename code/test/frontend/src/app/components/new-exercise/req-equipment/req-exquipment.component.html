@@ -1,0 +1,11 @@
+
+<div class="equiment-selector-wrapper">
+    <p-listbox [options]="equipmentList" [(ngModel)]="selectedEquipment" optionLabel="name" scrollHeight="21rem" class="equipment-listbox">
+        <ng-template let-equip #item>
+            <div class="equiment-item">
+                <img [src]="'/equipment/' + equip.name.toLowerCase() + '.png' " style="width: 18px" />
+                <div>{{ equip.name }}</div>
+            </div>
+        </ng-template>
+    </p-listbox>
+</div>

@@ -42,10 +42,32 @@ export class MuscleSelectorComponent {
     });
   }
 
-  static clearSelection() {
+  clear() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach((checkbox) => {
       (checkbox as HTMLInputElement).checked = false;
     });
+  }
+
+  ready(): boolean {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let checked = false;
+    checkboxes.forEach((checkbox) => {
+      if ((checkbox as HTMLInputElement).checked) {
+        checked = true;
+      }
+    });
+    return checked;
+  }
+
+  getMuscles(): string[] {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let muscles: string[] = [];
+    checkboxes.forEach((checkbox) => {
+      if ((checkbox as HTMLInputElement).checked) {
+        muscles.push((checkbox as HTMLInputElement).id);
+      }
+    });
+    return muscles;
   }
 }
