@@ -6,10 +6,9 @@ $svg-z: 100;
 
 .muscle-groups {
   position: relative;
-  width: 320px;
-  padding: .5rem 1rem;
+  width: 340px;
   border-radius: 5px;
-  overflow: hidden;
+  //overflow: hidden;
   h1 {
     margin: -.5rem -1rem 1rem;
     padding: 0 1rem .75rem;
@@ -24,7 +23,7 @@ $svg-z: 100;
     letter-spacing: -.03em;
     text-transform: uppercase;
   }
-  label + h2 { margin-top: 1rem; }
+  
   label {
     width: 50px;
     display: block;
@@ -85,9 +84,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   width: 100%;
-  padding: 2rem 0;
   .info {
     font-size: .8rem;
     display: block;
