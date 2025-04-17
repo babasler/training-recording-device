@@ -26,30 +26,24 @@ export class ExerciseNameComponent {
     this.disabled_un = false;
   }
 
-  onUnClicked($event: any) {
-    if(this.checked_un) {
+  onUnClicked() {
+    if (this.checked_un) {
       this.checked_bi = false;
       this.disabled_bi = true;
-    }
-    else {
-      this.checked_un = false;
+    } else {
       this.disabled_bi = false;
     }
   }
-  onBiClicked($event: any) {
-    if(this.checked_bi) {
+  
+  onBiClicked() {
+    if (this.checked_bi) {
       this.checked_un = false;
       this.disabled_un = true;
-    }
-    else {
-      this.checked_bi = false;
+    } else {
       this.disabled_un = false;
     }
   }
-
-  getValue(): string {
-    return this.value;
-  }
+  
   getExerciseName(): string {
     return this.value;
   }
@@ -62,7 +56,7 @@ export class ExerciseNameComponent {
   }
 
   ready(): boolean {
-    return this.value.length > 0 && (this.checked_bi || this.checked_un);
+    return this.value !== '' && (this.checked_bi || this.checked_un);
   }
 
   clear() {
@@ -72,5 +66,4 @@ export class ExerciseNameComponent {
     this.disabled_bi = false;
     this.disabled_un = false;
   }
-
 }

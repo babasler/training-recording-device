@@ -8,39 +8,60 @@ import { Component } from '@angular/core';
 })
 export class MuscleSelectorComponent {
 
-  ngOnInit(): void {
-    const groups: NodeListOf<SVGGElement> = document.querySelectorAll(".muscle-groups svg g g[id]");
+  ngOnInit() {
+    const groups = document.querySelectorAll(".muscle-groups svg g g[id]");
+  
     groups.forEach(function(group) {
-      // For the hover
-      group.addEventListener('mouseover', function(el: MouseEvent) {
-        let id = (el.target as SVGElement).id.toLowerCase();
-        if (!id) id = (el.target as SVGElement).parentElement?.id.toLowerCase() || '';
-        let label = document.querySelector(`label[for="${id}"]`) as HTMLLabelElement;
-        if (label.classList)
-          label.classList.add("hover");
-        else
-          label.className += ' ' + "hover";
+  
+      // Mouseover: Label hervorheben
+      group.addEventListener("mouseover", function(el) {
+        let id = (el.target as HTMLElement)?.id?.toLowerCase();
+  
+        // Falls kein ID vorhanden, versuch es mit dem Parent
+        if (!id) {
+          id = (el.target as HTMLElement).parentElement?.id?.toLowerCase() || "";
+        }
+  
+        const label = document.querySelector(`label[for="${id}"]`);
+  
+        if (label) {
+          // Klasse "hover" hinzufügen
+          if (label.classList) {
+            label.classList.add("hover");
+          } else {
+            label.className += " hover";
+          }
+        }
       });
-      group.addEventListener('mouseout', function(el: MouseEvent) {
-        let id = (el.target as SVGElement).id.toLowerCase();
-        if (!id) id = (el.target as SVGElement).parentElement?.id.toLowerCase() || '';
-        let label = document.querySelector(`label[for="${id}"]`) as HTMLLabelElement;
-        let clss = "hover";
-        if (label.classList)
-          label.classList.remove(clss);
-        else
-          label.className = label.className.replace(new RegExp('(^|\\b)' + clss.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+  
+      // Mouseout: Hover-Klasse entfernen
+      group.addEventListener("mouseout", function(el) {
+        let id = (el.target as HTMLElement)?.id?.toLowerCase();
+  
+        // Falls kein ID vorhanden, versuch es mit dem Parent
+        if (!id) {
+          id = (el.target as HTMLElement).parentElement?.id?.toLowerCase() || "";
+        }
+  
+        const label = document.querySelector(`label[for="${id}"]`);
+        const clss = "hover";
+  
+        if (label) {
+          if (label.classList) {
+            label.classList.remove(clss);
+          } else {
+            // Klassisch mit Regex ersetzen
+            label.className = label.className.replace(
+              new RegExp("(^|\\b)" + clss.split(" ").join("|") + "(\\b|$)", "gi"),
+              " "
+            ).trim();
+          }
+        }
       });
-      // For the click
-      group.addEventListener('click', function(el: MouseEvent) {
-        let id = (el.target as SVGElement).id.toLowerCase();
-        if (!id) id = (el.target as SVGElement).parentElement?.id.toLowerCase() || '';
-        let input = document.getElementById(id) as HTMLInputElement;
-         if (input.checked) input.checked = false;
-        else input.checked = true;
-      });
+  
     });
   }
+  
 
   clear() {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
@@ -53,21 +74,24 @@ export class MuscleSelectorComponent {
     const checkboxes = document.querySelectorAll('input[type="checkbox"]');
     let checked = false;
     checkboxes.forEach((checkbox) => {
-      if ((checkbox as HTMLInputElement).checked) {
+      if((checkbox as HTMLInputElement).checked) {
         checked = true;
       }
     });
     return checked;
   }
+  
 
-  getMuscles(): string[] {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    let muscles: string[] = [];
+  getSelectedMuscles(): string[] {
+    const checkboxes = document.querySelectorAll<HTMLInputElement>('input[type="checkbox"].muscles-helper');
+    const muscles: string[] = [];
+  
     checkboxes.forEach((checkbox) => {
-      if ((checkbox as HTMLInputElement).checked) {
-        muscles.push((checkbox as HTMLInputElement).id);
+      if (checkbox.checked) {
+        muscles.push(checkbox.id);
       }
     });
     return muscles;
   }
+  
 }

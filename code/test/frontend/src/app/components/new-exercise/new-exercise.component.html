@@ -29,7 +29,8 @@
                     icon="pi pi-check" 
                     size="large" 
                     severity="secondary" 
-                    [disabled]="canSave"
+                    [disabled]="!canSave()"
+                    (onClick)="saveExercise(exerciseRef.getExerciseName(), muscleSelectorRef.getSelectedMuscles(), equipmentRef.getSelectedEquipment())"
                     />
         <p-button   label="Delete" 
                     icon="pi pi-trash" 

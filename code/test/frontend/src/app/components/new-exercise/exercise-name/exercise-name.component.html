@@ -6,14 +6,22 @@
             placeholder="Übung" 
             size="large">
     </div>
-    <div class="exercise-type">
-        <div class="card flex justify-center">
-            <p-checkbox [(ngModel)]="checked_bi" [binary]="true" [disabled]="disabled_bi" inputId="bilateral" (ngModelChange)="onBiClicked($event)" />
-            <label for="bilateral" class="ml-2" >Bilateral</label>
-        </div>
-        <div class="card flex justify-center">
-            <p-checkbox [(ngModel)]="checked_un" [binary]="true" [disabled]="disabled_un" inputId="unilateral" (ngModelChange)="onUnClicked($event)"/>
-            <label for="unilateral" class="ml-2" >Unilateral</label>
-        </div>
-    </div>
+    <div class="checkbox-group">
+        <p-checkbox 
+          label="Unilateral" 
+          [(ngModel)]="checked_un" 
+          [disabled]="disabled_un" 
+          binary="true"
+          (onChange)="onUnClicked()">
+        </p-checkbox>
+      
+        <p-checkbox 
+          label="Bilateral" 
+          [(ngModel)]="checked_bi" 
+          [disabled]="disabled_bi" 
+          binary="true"
+          (onChange)="onBiClicked()">
+        </p-checkbox>
+      </div>
 </div>
+

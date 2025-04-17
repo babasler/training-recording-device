@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ListboxModule } from 'primeng/listbox';
-
-interface Equipment {
-  name: string;  
-}
+import { Equipment } from '../../../models/equipment.model';
 
 @Component({
   selector: 'req-exquipment',
@@ -29,12 +26,16 @@ export class ReqExquipmentComponent implements OnInit {
       { name: 'Ball' },
       { name: 'Sonstiges' }
     ];
+    this.selectedEquipment = { name: '' };
   }
 
   clear() {
     this.selectedEquipment = { name: '' };
   }
   ready(): boolean {
-    return this.selectedEquipment.name !== '';
+    return this.selectedEquipment?.name !== '';
+  }
+  getSelectedEquipment(): string {
+    return this.selectedEquipment?.name;
   }
 }
